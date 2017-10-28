@@ -71,7 +71,8 @@
   */
 
 enum { MACRO_VERSION_INFO,
-       MACRO_ANY
+       MACRO_ANY,
+       MACRO_SHIFTZ
      };
 
 
@@ -145,7 +146,7 @@ const Key keymaps[][ROWS][COLS] PROGMEM = {
   (___,      Key_F1,           Key_F2,      Key_F3,     Key_F4,        Key_F5,           Key_LEDEffectNext,
    Key_Tab,  ___,              Key_mouseUp, ___,        Key_mouseBtnR, Key_mouseWarpEnd, Key_mouseWarpNE,
    Key_Home, Key_mouseL,       Key_mouseDn, Key_mouseR, Key_mouseBtnL, Key_mouseWarpNW,
-   Key_End,  Key_PrintScreen,  Key_Insert,  ___,        Key_mouseBtnM, Key_mouseWarpSW,  Key_mouseWarpSE,
+   Key_End,  M(MACRO_SHIFTZ),  Key_Insert,  Key_PrintScreen,        Key_mouseBtnM, Key_mouseWarpSW,  Key_mouseWarpSE,
    Key_LeftAlt, Key_Delete, Key_LeftAlt, ___,
    ___,
 
@@ -228,7 +229,14 @@ const macro_t *macroAction(uint8_t macroIndex, uint8_t keyState) {
   case MACRO_ANY:
     anyKeyMacro(keyState);
     break;
+
+  case MACRO_SHIFTZ:
+    return MACRODOWN(I(25),
+                     D(LeftShift), T(Z), T(Z), U(LeftShift)
+                    );
+    break;
   }
+
   return MACRO_NONE;
 }
 
