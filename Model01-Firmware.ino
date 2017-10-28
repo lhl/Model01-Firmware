@@ -276,7 +276,7 @@ void setup() {
 
     // The rainbow effect changes the color of all of the keyboard's keys at the same time
     // running through all the colors of the rainbow.
-    &LEDRainbowEffect,
+    // &LEDRainbowEffect,
 
     // The rainbow wave effect lights up your keyboard with all the colors of a rainbow
     // and slowly moves the rainbow across your keyboard
@@ -284,20 +284,20 @@ void setup() {
 
     // The chase effect follows the adventure of a blue pixel which chases a red pixel across
     // your keyboard. Spoiler: the blue pixel never catches the red pixel
-    &LEDChaseEffect,
+    // &LEDChaseEffect,
 
     // These static effects turn your keyboard's LEDs a variety of colors
-    &solidRed, &solidOrange, &solidYellow, &solidGreen, &solidBlue, &solidIndigo, &solidViolet,
+    // &solidRed, &solidOrange, &solidYellow, &solidGreen, &solidBlue, &solidIndigo, &solidViolet,
 
     // The breathe effect slowly pulses all of the LEDs on your keyboard
-    &LEDBreatheEffect,
+    // &LEDBreatheEffect,
 
     // The AlphaSquare effect prints each character you type, using your
     // keyboard's LEDs as a display
-    &AlphaSquareEffect,
+    // &AlphaSquareEffect,
 
     // The stalker effect lights up the keys you've pressed recently
-    &StalkerEffect,
+    // &StalkerEffect,
 
     // The numlock plugin is responsible for lighting up the 'numpad' mode
     // with a custom LED effect
@@ -315,17 +315,17 @@ void setup() {
   NumLock.numPadLayer = NUMPAD;
 
   // We configure the AlphaSquare effect to use RED letters
-  AlphaSquare.color = { 255, 0, 0 };
+  // AlphaSquare.color = { 255, 0, 0 };
 
   // We set the brightness of the rainbow effects to 150 (on a scale of 0-255)
   // This draws more than 500mA, but looks much nicer than a dimmer effect
-  LEDRainbowEffect.brightness(150);
+  // LEDRainbowEffect.brightness(150);
   LEDRainbowWaveEffect.brightness(150);
 
   // The LED Stalker mode has a few effects. The one we like is
   // called 'BlazingTrail'. For details on other options,
   // see https://github.com/keyboardio/Kaleidoscope-LED-Stalker
-  StalkerEffect.variant = STALKER(BlazingTrail);
+  // StalkerEffect.variant = STALKER(BlazingTrail);
 
   // We want to make sure that the firmware starts with LED effects off
   // This avoids over-taxing devices that don't have a lot of power to share
