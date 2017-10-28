@@ -333,7 +333,7 @@ void setup() {
   // LEDOff.activate();
   
   // YOLO
-  LEDRainbowWaveEffect.activate()
+  LEDRainbowWaveEffect.activate();
 }
 
 /** loop is the second of the standard Arduino sketch functions.
