@@ -232,7 +232,7 @@ const macro_t *macroAction(uint8_t macroIndex, uint8_t keyState) {
 
   case MACRO_SHIFTZ:
     return MACRODOWN(I(25),
-                     D(LeftShift), T(Z), T(Z), U(LeftShift)
+                     Tr(Key_Escape), D(LeftShift), T(Z), T(Z), U(LeftShift)
                     );
     break;
   }
